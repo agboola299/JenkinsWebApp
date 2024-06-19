@@ -10,7 +10,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 echo "Building the docker image from Dockerfile in src directory"
-                sh 'docker build -t rkguptaaa/jenkinswebapp .'
+                sh 'docker build -t agboolaa299/jenkinsproject .'
             }
         }
         stage('Login into the dockerhub account'){
@@ -23,7 +23,7 @@ pipeline{
         stage('Push docker image on dockerhub online'){
             steps{
                 echo "Execute the pushing command for image onto dockerhub"
-                sh "docker push rkguptaaa/jenkinswebapp"
+                sh "docker push agboolaa299/jenkinsproject"
             }
         }
 
